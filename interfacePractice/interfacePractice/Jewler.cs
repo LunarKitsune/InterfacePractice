@@ -7,34 +7,47 @@ using System.Threading.Tasks;
 namespace interfacePractice
 {
     //let say this person works at sephora or kay Jewlers
-    class Jewler:Employee,IEmployee, IRepair
+    class Jewler:Employee,IRepairer, IStocker
     {
-        Ring[] ringQueue;
+        Merchandise[] ItemQueue;
 
-        public void AppraiseRing(string ringType)
+        public void AppraiseRing(Ring Ring)
         {
             //appraise ring object
             //This should get a ring type, how big the ring is, and
             //if its a true ring or not? Though false ring should be its own type
         }
 
-        public void Fix()
+        public void Fix(Merchandise merch)
         {
-            foreach(Ring broken in ringQueue)
-            {
-
-            }
             throw new NotImplementedException();
         }
 
-        public double GetRepairValue()
+        public double GetRepairValue(Merchandise merchandise)
         {
-            double repairValue = 0;
-
-            //implement something somewhere where we can get max durability of a ring
-            //and the current durability and some equation to get a repair value
-
-            return repairValue;
+            throw new NotImplementedException();
         }
+
+        public void AddStock()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteStockItem(int stockID)
+        {
+            throw new NotImplementedException();
+        }
+
+
+        public void GetStockInfo(int stockID)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void UpdateStock(int stockID)
+        {
+            throw new NotImplementedException();
+        }
+
     }
 }

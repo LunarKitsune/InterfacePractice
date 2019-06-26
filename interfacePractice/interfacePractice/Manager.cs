@@ -6,19 +6,26 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    class Manager : Employee, IEmployee, IManage
+    class Manager : Employee,IManage,IStocker
     {
+        private enum jobCode { manager = 1, jewler = 2, clerk = 3}
+
         public void CreateEmployee(int EmployType)
         {
             switch(EmployType)
             {
-
+                case 1:
+                    Manager newManager = new Manager();
+                    break;
+                case 2:
+                    Jewler newJewler = new Jewler();
+                    break;
             }
         }
 
-        public void DestroyEmployee()
+        public void DestroyEmployee(int numID, Store storeID)
         {
-            throw new NotImplementedException();
+            
         }
 
         public void AddStock()
@@ -40,5 +47,6 @@ namespace interfacePractice
         {
             throw new NotImplementedException();
         }
+
     }
 }

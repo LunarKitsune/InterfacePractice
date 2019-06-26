@@ -26,5 +26,20 @@ namespace interfacePractice
             stacy.GetMerchandisePermission = false;
             
         }
+
+        public void DisplayCart()
+        {
+
+        }
+
+        public void AddToCart()
+        {
+
+        }
+
+        public void PurchaseCart()
+        {
+
+        }
     }
 }

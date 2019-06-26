@@ -27,12 +27,12 @@ namespace interfacePractice
 
         public void DisplayEmployeeInfo()
         {
-            Console.WriteLine($"Name: {firstName} {lastName}\nID:{numID}\n{storeID}");
+            throw new NotImplementedException();
         }
 
         public void Sell()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    interface IEmployee
+    interface IRepairer
     {
-        void DisplayEmployeeInfo();
-        void Sell();
+        double GetRepairValue(Merchandise merchandise, bool addingGem, Gem gem);
+        void Fix(Merchandise merch);
+        
 
     }
 }

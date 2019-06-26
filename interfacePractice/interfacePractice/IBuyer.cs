@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    interface IEmployee
+    interface IBuyer
     {
-        void DisplayEmployeeInfo();
-        void Sell();
+        void DisplayCart(StoreBasket basket);
 
+        void AddToCart(StoreBasket basket);
+
+        void PurchaseCart(StoreBasket basket);
     }
 }

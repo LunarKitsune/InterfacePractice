@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    interface IEmployee
+    interface IStocker
     {
-        void DisplayEmployeeInfo();
-        void Sell();
-
+        void AddStock();
+        void UpdateStock(int stockID);
+        void DeleteStockItem(int stockID);
+        void GetStockInfo(int stockID);
     }
 }

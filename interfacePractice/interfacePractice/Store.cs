@@ -10,7 +10,7 @@ namespace interfacePractice
     {
         //set some sort of inventory model here
         double VaultAmt;
-        Dictionary<Ring, double> availableRingInv;
+        Dictionary<Merchandise, double> availableRingInv;
         Dictionary<Employee, int> AvailableEmployees; 
 
         public Store()
@@ -18,5 +18,22 @@ namespace interfacePractice
 
         }
 
+        public void LoadStoreState()
+        {
+            //assume this function will load some database of inventory
+            //(I don't have/done database practice coding yet)
+        }
+
+        public void SerializeStoreState()
+        {
+            //Assume this function will save 
+        }
+
+        public void CreateCustomer()
+        {
+
+        }
     }
+
+    
 }

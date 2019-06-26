@@ -7,29 +7,55 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    class Customer:IBuy
+    class Customer:IBuyer
     {
-        //holds a ring, and a value oduble
-        Dictionary<Ring, double> ProductBasket = new Dictionary<Ring, double>();
-        double MoneyAmt;
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public double getMoneyAmount { get; set; }
 
-        
+        //I think this should be private. lol. Having this public would be like
+        //the customer shopping around and anyone can take from their basket while
+        //they shop
+        public StoreBasket customerCart = new StoreBasket();
+
+        //just for simplicity that they have an inventory
+        public List<Merchandise> Inventory = new List<Merchandise>();
+
         public Customer()
         {
 
         }
 
-        public void Buy()
+        public void DisplayCart(StoreBasket basket)
         {
-            //here we would get the chosen product with ChooseProduct and then
-            //Have the result subtract the customers money amount, and clear the product basket
+            Console.WriteLine($"{"Item",-20}{"Cost"}");
+            foreach(KeyValuePair<Merchandise, double> Item in customerCart.BasketItems)
+            {
+                Console.WriteLine($"{Item.Key,-20}: {Item.Value:C}");
+            }
         }
 
-        public void ChooseProduct(Dictionary<Ring, double> ProductBasket)
+        public void AddToCart(StoreBasket basket)
         {
-            //here we would have the customer choose product, maybe there should be a
-            //random number that sites how much the customer wants, and then they choose
-            //said items? 
+            //I think I should have an enumerator list for the type
+            //case it out in a switch statement to which item it gets converted to
+            //with what qualities?
+
+            //this should also access the store quantity and change store system
+            //inventory of x product by - x number of product taken
+
+        }
+
+        public void PurchaseCart(StoreBasket basket)
+        {
+            foreach (KeyValuePair<Merchandise, double> BasketItem in customerCart.BasketItems)
+            {
+                getMoneyAmount -= BasketItem.Value;
+                Inventory.Add(BasketItem.Key);
+            }
+
+            customerCart.BasketItems.Clear();
         }
     }
+
 }

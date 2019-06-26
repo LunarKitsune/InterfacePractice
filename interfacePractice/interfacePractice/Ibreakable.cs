@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    interface IEmployee
+    interface Ibreakable
     {
-        void DisplayEmployeeInfo();
-        void Sell();
-
+        int CurrDurability { get; set; }
+        int MaxDurability { get; set; }
+        bool IsUsable { get; set; }
     }
 }

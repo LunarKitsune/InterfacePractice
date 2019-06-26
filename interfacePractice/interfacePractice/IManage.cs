@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace interfacePractice
 {
-    interface IManage:IStock
+    interface IManage:IStocker
     {
         void CreateEmployee(int employType);
-        void DestroyEmployee(int employeeID);
+        void DestroyEmployee(int employeeID, Store StoreLocation);
 
     }
 }
